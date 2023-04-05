@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue-color: hsl(215, 51%, 70%);
+    --cyan-color: hsl(178, 100%, 50%);
+    --bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --bright-color: hsl(0, 0%, 100%);
+}
+
+
+
+html {
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bg-color);
+    height: 490px;
+    border-radius: 0.7rem;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.container .primary {
+    border-radius: 0.4rem;
+    height: 100%;
+    display: block;
+    transition: .5s ease;
+    margin-bottom: 1rem;
+}
+
+.container .main-image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.container .main-image .view {
+    position: absolute;
+    top: 0px;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    border-radius: 0.4rem;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.container .main-image .view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .main-image .view:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.texts h1 {
+    color: var(--bright-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.texts h1:hover {
+    color: var(--cyan-color);
+    cursor: pointer;
+}
+
+.texts p {
+    color: var(--soft-blue-color);
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+
+}
+
+.details li {
+    display: flex;
+    align-items: center;
+}
+
+.details li img {
+    margin-right: .4rem;
+}
+
+.crypto {
+    color: var(--cyan-color);
+
+}
+
+.date {
+    color: var(--soft-blue-color);
+
+}
+
+.creator {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.creator img {
+    width: 1.5rem;
+    border: 1px solid var(--bright-color);
+    border-radius: 50%;
+}
+
+.creator p {
+    color: var(--soft-blue-color);
+    font-weight: 300;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+.creator span {
+    color: var(--bright-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.creator span:hover {
+    color: var(--cyan-color);
+    cursor: pointer;
+}
